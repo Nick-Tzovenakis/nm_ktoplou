@@ -1,0 +1,158 @@
+.menu { 
+    background-color: #232323;
+    height: 100vh;  
+} 
+
+.menu-link { 
+    font-size: 18px; 
+    border: none;
+} 
+.menu-link.active { 
+    color: #A58A55;
+    border-left: 1px solid #A58A55;
+}
+
+.menu-bg { 
+    background-image: url("../../../dist/assets/img/bg_1.png") ;
+    background-size: contain;
+    background-position: left -80px bottom;
+    background-repeat: no-repeat; 
+}
+
+.menu-footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+.menu-footer-1{
+    font-size:14px;
+}
+.menu-footer-2{
+    font-size:14px;
+}
+.menu-footer-3{
+    font-size: 10px;
+}
+
+
+
+.main-slider1 {
+    background-image: url("../../../dist/assets/img/Slider1.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh;
+}
+
+.main-slider2 {
+    background-image: url("../../../dist/assets/img/Slider2.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh;
+}
+
+.main-text-1 {
+    line-height: 1;
+    font-size: 75px;
+}
+.main-text-2 {
+    font-size: 24px;
+}
+
+.waves-bg{
+    background-image: url("../../../dist/assets/img/bg_waves.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh;
+} 
+
+.first_wine{
+    background-color: #C5BEAB;
+    height: 100vh; 
+}
+.second_wine{
+    background-color: #EEEDE8;
+    height: 100vh;
+}
+.third_wine{
+    background-color: #BEA1A5;
+    height: 100vh;
+} 
+
+.wine-text-1{
+    color: black;
+    font-size: 20px;
+}
+
+.wine-text-2{
+    color: black;
+    font-size: 12px;
+}
+
+.grapes_bg{
+    background-image: url("../../../dist/assets/img/grapes.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: left -300px top 200px;
+    height: 100vh;
+}
+
+.history_bg{
+    background-image: url("../../../dist/assets/img/Slider1.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: left -300px top 100px;
+    height: 100vh;
+}
+.history-section{
+    
+    .history-title{
+        font-size: 28px;
+    }
+    .history-text{
+        overflow-y: auto;
+        height:60vh;
+        font-size: 12px;
+    }
+}
+
+.wine-info {
+    height:70vh;
+    a {
+        color: black;
+      }
+    .wine-img {
+        height: 100vh; 
+    }
+    .wine-title {
+        font-size: 24px;
+    }
+    .wine-details {
+        font-size: 12px;
+    }
+    .wine-description {
+        color:black;
+    } 
+    .wine-analysis {
+        overflow-y: auto;
+        height:50%;
+    }
+}
+
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}

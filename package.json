@@ -12,7 +12,8 @@
     "bootstrap": "^4.6.0",
     "del": "^6.0.0",
     "get-google-fonts": "^1.2.2",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

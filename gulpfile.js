@@ -1,27 +1,18 @@
-var del = require('del');
+const gulp = require('gulp');
+const cache = require('gulp-cache');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const useref = require('gulp-useref');
+const browserSync = require('browser-sync').create();
+const del = require('del');
 
-var gulp = require('gulp');
-var cache = require('gulp-cache');
-var sass = require('gulp-sass');
 
-var browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify'); //optimize js
+const gulpIf = require('gulp-if');
 
-var useref = require('gulp-useref');
+const cssnano = require('gulp-cssnano'); //optimize css
 
-var uglify = require('gulp-uglify'); //optimize js
-var gulpIf = require('gulp-if');
-
-var cssnano = require('gulp-cssnano'); //optimize css
-
-var imagemin = require('gulp-imagemin'); //optimize images
-
-/**
- * Simple task
- */
-gulp.task('hello',  (done) => {
-    console.log('Hello Jove');
-    done();
-});
+const imagemin = require('gulp-imagemin'); //optimize images
 
 /**
  * Convert sass to css
@@ -32,12 +23,18 @@ gulp.task('hello',  (done) => {
  *      *.+(scss|sass)  multiple
  */
 gulp.task('sass', function () {
-    return gulp.src('./assets/scss/**/*.scss') // Get all files ending with .scss in app/scss
-        .pipe(sass())
+    return gulp.src('./assets/scss/**/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/assets/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(browserSync.stream());
+    // return gulp.src('./assets/scss/**/*.scss') // Get all files ending with .scss
+    //     .pipe(sass())
+    //     .pipe(gulp.dest('./dist/assets/css'))
+    //     .pipe(browserSync.reload({
+    //         stream: true
+    //     }))
 });
 
 /**
@@ -58,7 +55,6 @@ gulp.task('watch', gulp.parallel(['browserSync', 'sass'], function () {
     gulp.watch('assets/scss/**/*.scss', gulp.series(['sass']));
     gulp.watch('/*.html', browserSync.reload);
     gulp.watch('assets/js/**/*.js', browserSync.reload);
-    // Other watchers
 }));
 
 /**
