@@ -23,6 +23,58 @@
 <body>
     <div class="container-fluid">
         <div class="row gx-3 ">
+             
+            <div class="fixed-top d-block d-xl-none">
+                <img src="/dist/assets/img/cropped_logo.png"  width="80px" height="80px" class="d-inline-block d-xl-none p-2" alt="..."> 
+                <div id="mySidepanel" class="sidepanel"> 
+                    <div class="sticky-top p-0">
+                        <img src="/dist/assets/img/cropped_logo.png"  class="p-2" width="70px" height="70px" alt="..."> 
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
+                    <div class="row row-cols-1">
+                        <div class="col mt-5 d-flex justify-content-center">
+                            <nav class="nav menu-nav flex-column">
+                                <a class="menu-link active p-1 text-primary">Αρχική</a>
+                                <a class="menu-link p-1 text-muted" href="#">Εταιρεία</a>
+                                <a class="menu-link p-1 text-muted" href="#">Ταυτότητα</a>
+                                <a class="menu-link p-1 text-muted" href="./wines.html" target="_self">Κρασιά</a>
+                                <a class="menu-link p-1 text-muted" href="./history.html" target="_self">Ιστορία</a>
+                            </nav>
+                        </div>
+                        <div class="col pt-5">
+                            <div class="col mt-5 d-flex justify-content-center">
+                                <div class=" flex-column">
+                                    <a class="menu-link p-1 text-muted mt-5 mb-5 menu-footer-1" href="#">Επικοινωνία</a>
+                                    <div class="mt-4">
+                                        <a class="menu-link p-1 text-primary menu-footer-2" href="#">EL</a>
+                                        <a class="menu-link p-1 text-muted menu-footer-2" href="#">/ENG</a>
+                                    </div>
+                                    <div>
+                                        <a href="#">
+                                            <img src="/dist/assets/img/fb.png" class="p-1" alt="...">
+                                        </a>
+                                        <a href="#">
+                                            <img src="/dist/assets/img/inst.png" class="p-1" alt="...">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mt-5 d-flex justify-content-center">
+                                <div class="col mt-5 mb-5 d-flex justify-content-center text-left ml-4">
+                                    <div class="text-white menu-footer-3">&#169; 2021 ktimatoplou.gr Designed<br> &
+                                        developed
+                                        by <a href="#" class="text-white"><u>NETMECHANICS</u></a><br><a href="#"
+                                            class="text-white">Όροι χρήσης & Πολιτική απορρήτου
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+            
+
             <div class="col-3 menu menu-bg text-left d-none d-xl-block">
                 <div class="row ">
                     <img src="/dist/assets/img/logo.png" class="img-fluid mx-auto mt-5 mb-5 p-0" alt="...">
@@ -73,8 +125,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-interval="3000" data-pause="false">
                             <div class="row main-slider1">
-                                <div class="col-4"></div>
-                                <div class="col-8 mt-5">
+                                <div class="col-8 mt-5 main-text-mobile">
                                     <div class="text-wrap text-white text-right main-text-1 p-2">
                                         80 ΧΡΟΝΙΑ
                                     </div>
@@ -96,7 +147,7 @@
                         <div class="carousel-item" data-interval="5000" data-pause="false">
                             <div class="row main-slider2">
                                 <div class="col-4"></div>
-                                <div class="col-8 mt-5">
+                                <div class="col-8 mt-5 main-text-mobile">
                                     <div class="text-wrap text-white text-right main-text-1 p-2">
                                         TO ΚΑΛΟ ΚΡΑΣΙ
                                     </div>
@@ -124,6 +175,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "99%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
 </body>
 
 </html>

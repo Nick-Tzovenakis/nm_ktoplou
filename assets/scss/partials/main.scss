@@ -156,10 +156,25 @@
 }
 
 @media (max-width:768px) { 
+    .main-text-mobile{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .main-text-1 {
+        line-height: 1;
+        font-size: 24px;
+    }
+    .main-text-2 {
+        font-size: 12px;
+    }
+
     .history_bg{
         background-position: top;
         height: 80vh;
     }
+    
     .history-section { 
         .history-text{
             overflow-y: unset;
@@ -180,7 +195,22 @@
     }
 }
 
-@media  (max-width: 1200px) and (min-width:768px) { 
+@media  (max-width: 1200px) and (min-width:768px) {
+    .main-text-mobile{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .main-text-1 {
+        line-height: 1;
+        font-size: 60px;
+    }
+
+    .main-text-2 {
+        font-size: 24px;
+    }
+
     .history_bg{
         background-position: top;
         height: 80vh;
@@ -204,5 +234,33 @@
     }
 }
 
-
  
+.sidepanel  { 
+    height: 100vh;
+    width: 0;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s; 
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        color:lightgray
+    }
+}  
+ 
+
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color:transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none; 
+    float:right;
+}
