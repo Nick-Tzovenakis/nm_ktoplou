@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid overflow-auto">
         <div class="row gx-3 ">
-            <div class="col-3 menu menu-bg text-left ">
+            <div class="col-3 menu menu-bg text-left d-none d-xl-block">
                 <div class="row ">
                     <img src="/dist/assets/img/logo.png" class="img-fluid mx-auto mt-5 mb-5 p-0" alt="...">
                 </div>
@@ -59,20 +59,26 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 p-0 waves-bg">
+            <div class="col-12 col-xl-9 p-0 waves-bg">
                 <div class="container-fluid">
-                    <div class="row row-cols-3 text-left">
-                        <div class="col-4 wine-img grapes_bg">
-                            <img src="/dist/assets/img/WHITE.png" class="p-4 m-4" height="80%" alt="...">
+                    <div class="row row-cols-xl-3 text-xl-left ">
+                        <div class="col-12 col-xl-4 wine-img grapes_bg text-center">
+                            <img src="/dist/assets/img/WHITE.png" class="p-xl-4 m-xl-4" height="80%" alt="...">
                         </div>
-                        <div class="col-6 pt-5 wine-info">
-                            <div class="pt-5">
+                        <div class="col-12 col-xl-4 text-center d-block d-xl-none">
+                            <div class="text-primary wine-text-1 pt-4 font-weight-bold">Toplou organic Ερυθρό 2019</div>
+                            <div class="wine-text-2 font-weight-bold">Θραψαθήρι - Ασύρτικο - Chardonnay
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xl-6 pt-5 wine-info flex-column">
+                            <div class="pt-5 d-none d-xl-block">
                                 <a href="./wines.html" target="_self">&larr;Επιστροφή</a>
                             </div>
-                            <div class="text-primary font-weight-bold wine-title pb-2">
+                            <div class="text-primary font-weight-bold wine-title pb-2 d-none d-xl-block">
                                 Toplou Organic Λευκό 2019
                             </div>
-                            <div class="wine-details font-weight-bold pb-5">
+                            <div class="wine-details font-weight-bold pb-5 d-none d-xl-block">
                                 Εσοδεία:2019 | Παραγωγός: Κτήμα Τοπλού<br>
                                 Ταξινόμηση: Προστατευόμενη Γεωγραφική Ένδειξη Λασίθι
                             </div>
@@ -117,7 +123,7 @@
                                 θαλάμους για ένα βράδυ.
                             </div>
                         </div>
-                        <div class="col-2"></div>
+                        <div class="col-12 col-xl-2"></div>
                     </div>
                 </div>
             </div>

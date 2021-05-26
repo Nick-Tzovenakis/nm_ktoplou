@@ -34,8 +34,6 @@
     font-size: 10px;
 }
 
-
-
 .main-slider1 {
     background-image: url("../../../dist/assets/img/Slider1.jpg");
     background-repeat: no-repeat; 
@@ -103,6 +101,7 @@
     background-position: left -300px top 100px;
     height: 100vh;
 }
+
 .history-section{
     
     .history-title{
@@ -138,7 +137,6 @@
     }
 }
 
-
 .vert .carousel-item-next.carousel-item-left,
 .vert .carousel-item-prev.carousel-item-right {
     -webkit-transform: translate3d(0, 0, 0);
@@ -156,3 +154,55 @@
 -webkit-transform: translate3d(0,-100%, 0);
         transform: translate3d(0,-100%, 0);
 }
+
+@media (max-width:768px) { 
+    .history_bg{
+        background-position: top;
+        height: 80vh;
+    }
+    .history-section { 
+        .history-text{
+            overflow-y: unset;
+            height:100%;
+        }
+    }
+
+    .grapes_bg { 
+        background-position: left -300px;
+        height: 80vh;
+    }
+
+    .wine-info {  
+        .wine-analysis { 
+            overflow-y: unset;
+            height:100%;
+        }
+    }
+}
+
+@media  (max-width: 1200px) and (min-width:768px) { 
+    .history_bg{
+        background-position: top;
+        height: 80vh;
+    }
+    .history-section { 
+        .history-text{
+            overflow-y: unset;
+            height:100%;
+        }
+    }
+
+    .grapes_bg { 
+        background-position: left -800px;
+        height: 80vh;
+    }
+    .wine-info {  
+        .wine-analysis { 
+            overflow-y: unset;
+            height:100%;
+        }
+    }
+}
+
+
+ 
