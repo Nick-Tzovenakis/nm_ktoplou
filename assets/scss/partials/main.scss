@@ -1,7 +1,14 @@
+/* Menu */
+
 .menu { 
     background-color: #232323;
     height: 100vh;  
 } 
+
+.menu-mobile { 
+    background-color: #232323; 
+} 
+
 
 .menu-link { 
     font-size: 18px; 
@@ -34,6 +41,37 @@
     font-size: 10px;
 }
 
+.sidepanel  { 
+    height: 100vh;
+    width: 0;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s; 
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        color:lightgray
+    }
+}  
+ 
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color:transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none; 
+    float:right;
+}
+
+/* Main */
+
 .main-slider1 {
     background-image: url("../../../dist/assets/img/Slider1.jpg");
     background-repeat: no-repeat; 
@@ -55,6 +93,9 @@
 .main-text-2 {
     font-size: 24px;
 }
+
+
+/* Wines list view*/
 
 .waves-bg{
     background-image: url("../../../dist/assets/img/bg_waves.png");
@@ -86,32 +127,14 @@
     font-size: 12px;
 }
 
+
+/* Wine view */
 .grapes_bg{
     background-image: url("../../../dist/assets/img/grapes.png");
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: left -300px top 200px;
     height: 100vh;
-}
-
-.history_bg{
-    background-image: url("../../../dist/assets/img/Slider1.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: left -300px top 100px;
-    height: 100vh;
-}
-
-.history-section{
-    
-    .history-title{
-        font-size: 28px;
-    }
-    .history-text{
-        overflow-y: auto;
-        height:60vh;
-        font-size: 12px;
-    }
 }
 
 .wine-info {
@@ -137,23 +160,29 @@
     }
 }
 
-.vert .carousel-item-next.carousel-item-left,
-.vert .carousel-item-prev.carousel-item-right {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+/* History */
+
+.history_bg{
+    background-image: url("../../../dist/assets/img/Slider1.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: left -300px top 100px;
+    height: 100vh;
 }
 
-.vert .carousel-item-next,
-.vert .active.carousel-item-right {
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100% 0);
+.history-section{
+    
+    .history-title{
+        font-size: 28px;
+    }
+    .history-text{
+        overflow-y: auto;
+        height:60vh;
+        font-size: 12px;
+    }
 }
 
-.vert .carousel-item-prev,
-.vert .active.carousel-item-left {
--webkit-transform: translate3d(0,-100%, 0);
-        transform: translate3d(0,-100%, 0);
-}
+/* Responsiveness */
 
 @media (max-width:768px) { 
     .main-text-mobile{
@@ -234,33 +263,22 @@
     }
 }
 
- 
-.sidepanel  { 
-    height: 100vh;
-    width: 0;
-    position: fixed;  
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s; 
-    
-    .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        color:lightgray
-    }
-}  
- 
+/* Other */
 
-.openbtn {
-    font-size: 40px;
-    cursor: pointer;
-    background-color:transparent;
-    color: white;
-    padding: 10px 15px;
-    border: none; 
-    float:right;
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
 }
