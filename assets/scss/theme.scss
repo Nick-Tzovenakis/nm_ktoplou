@@ -3,4 +3,7 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins"; 
 
-@import "./partials/main.scss";
+@import "./partials/type";
+@import "./partials/menu";
+@import "./partials/carousel";
+@import "./partials/main";
