@@ -49,7 +49,7 @@
     background-color: transparent; 
     width: 50px;
     border: none; 
-    padding-top: 8px;
+    padding-top: 12px;
 }
 
 .icon:after {
@@ -89,7 +89,7 @@
     transform: rotate(-45deg);
 }
 
-@media (max-width: 1140px){
+@media (max-width: 1200px){
     .drawer  { 
         height: 100vh;
         width: calc(98vw);

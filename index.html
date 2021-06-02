@@ -30,9 +30,9 @@
                         alt="logo">
                 </a>
                 <button id="navToggle" class="nav-toggle d-xl-none openbtn" type="button">
-                    <div class="icon p-2"></div>
-                    <div class="icon p-2"></div>
-                    <div class="icon p-2"></div>
+                    <span class="icon"></span><br>
+                    <span class="icon"></span><br>
+                    <span class="icon"></span><br>
                 </button>
 
                 <div id="drawer" class="drawer menu d-flex flex-column align-items-center">
@@ -78,8 +78,8 @@
                 </div>
             </div>
 
-            <div class="col-xl-8 col-12 p-0">
-                <div id="carousel" class="carousel vert slide" data-ride="carousel">
+            <div class="col-xl-9 col-12 p-0">
+                <div id="carousel" class="carousel vert slide d-flex flex-row" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item slider active">
                             <img src="/dist/assets/img/Slider1.jpg" class="img-fluid slider-church" alt="church">
@@ -104,20 +104,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="d-none d-xl-flex flex-column carousel-controls">
+                        <div class="container d-flex flex-column text-center justify-content-center flex-grow-1"> 
+                                <a href="#carousel" role="button" data-slide="prev">
+                                    <span class="dot"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a href="#carousel" role="button" data-slide="next">
+                                    <span class="dot"></span>
+                                    <span class="sr-only">Next</span>
+                                </a> 
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-1 d-none d-xl-flex flex-column carousel-controls">
-                <div class="container d-flex flex-column text-center justify-content-center flex-grow-1"> 
-                        <a href="#carousel" role="button" data-slide="prev">
-                            <span class="dot"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a href="#carousel" role="button" data-slide="next">
-                            <span class="dot"></span>
-                            <span class="sr-only">Next</span>
-                        </a> 
-                </div>
-            </div>
+            
         </div>
     </div>
     <script src="./assets/js/jquery.min.js"></script>
