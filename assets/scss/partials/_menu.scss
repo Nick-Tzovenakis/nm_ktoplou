@@ -56,10 +56,11 @@
     content: '';
     width: 50px;
     border-bottom: solid 1px #fff;
+    border-radius: 25px; 
     position: absolute;
     right: 8px;
     height: 4px;
-    background:#FCFCFC;
+    background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
@@ -89,7 +90,7 @@
     transform: rotate(-45deg);
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1199px){
     .drawer  { 
         height: 100vh;
         width: calc(98vw);
