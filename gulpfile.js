@@ -1,3 +1,4 @@
+const assetsDev = './assets/';
 const gulp = require('gulp');
 const cache = require('gulp-cache');
 const sass = require('gulp-sass');
@@ -14,6 +15,15 @@ const cssnano = require('gulp-cssnano'); //optimize css
 
 const imagemin = require('gulp-imagemin'); //optimize images
 
+// Copy node modules to target
+gulp.task('modules', function modules(done) {
+    gulp.src(['node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
+        .pipe(gulp.dest(assetsDev + 'js/'));
+
+    done();
+});
+
 /**
  * Convert sass to css
  * Patterns:
@@ -23,18 +33,12 @@ const imagemin = require('gulp-imagemin'); //optimize images
  *      *.+(scss|sass)  multiple
  */
 gulp.task('sass', function () {
-    return gulp.src('./assets/scss/**/*.scss')
+    return gulp.src(assetsDev + 'scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/assets/css'))
         .pipe(browserSync.stream());
-    // return gulp.src('./assets/scss/**/*.scss') // Get all files ending with .scss
-    //     .pipe(sass())
-    //     .pipe(gulp.dest('./dist/assets/css'))
-    //     .pipe(browserSync.reload({
-    //         stream: true
-    //     }))
 });
 
 /**
@@ -109,4 +113,5 @@ gulp.task('cache:clear', function (callback) {
 gulp.task('build', gulp.series('sass', 'useref', 'images', 'fonts', function (done) {
     done();
 }));
+
 

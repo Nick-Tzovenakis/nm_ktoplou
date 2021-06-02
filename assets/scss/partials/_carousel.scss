@@ -1,36 +1,35 @@
-.slider1 {
-    background-image: url("../../../dist/assets/img/Slider1.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
+.slider {
+    height: 100vh; 
+}
+
+.slider-img {
+    object-fit: cover; 
     height: 100vh;
+    width: 100%;
 }
 
-.slider2 {
-    background-image: url("../../../dist/assets/img/Slider2.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height: 100vh;
+.slider-church {
+    @extend .slider-img;
 }
 
-.desktop-caption {
-    position: fixed;
-    top: 8px;
+.slider-wine{
+    @extend .slider-img;
+    filter: brightness(80%);
+}
+
+.slider-caption {
+    position: absolute;
     right: 8px;
-}
+    bottom: 0px; 
+    color: #fff; 
+} 
 
-.mobile-caption {
-    position: fixed;
-    bottom: 8px;
-    right: 8px;
-}
-
-.text-1 {
-    line-height: 1;
-    font-size: 75px;
-}
-
-.text-2 {
-    font-size: 24px;
+.slider-pseudo-element:after {
+    content: '';
+    width: 10%;
+    border-bottom: solid 1px #fff;
+    position: absolute;
+    right: 0;       
 }
 
 .dot {
@@ -42,38 +41,18 @@
     &:hover{
         background-color: #A58A55; 
     }
+} 
+
+.carousel-controls{
+    background-color: #232323;
 }
 
-@media (max-width:768px) { 
-    .main-text-mobile{
+@include media-breakpoint-up(xl) { 
+    .slider-caption {
         position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
-    .text-1 {
-        line-height: 1;
-        font-size: 24px;
-    }
-    .text-2 {
-        font-size: 12px;
-    }
-}
-
-@media  (max-width: 1200px) and (min-width:768px) {
-    .main-text-mobile{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
-    .text-1 {
-        line-height: 1;
-        font-size: 60px;
-    }
-
-    .text-2 {
-        font-size: 24px;
+        right: 8px;
+        top: 0px; 
+        color: #fff; 
     }
 }
 
