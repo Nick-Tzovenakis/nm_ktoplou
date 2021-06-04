@@ -1,30 +1,42 @@
-.first-wine{
-    background-color: #C5BEAB;
-    height: 100vh; 
-}
-
-.second-wine{
-    background-color: #EEEDE8;
+.wine-col {
     height: 100vh;
-}
 
-.third-wine{
-    background-color: #BEA1A5;
-    height: 100vh;
-} 
-
-.caption-1{
-    color: black;
-    font-size: 20px;
-}
-
-.caption-2{
-    color: black;
-    font-size: 12px;
-}
-
-.product-img {
-    .img-fluid{
-        height: 100%;
+    a {
+        text-decoration: none;
     }
 }
+.first-col {
+    @extend .wine-col;
+    background-color: #C5BEAB;  
+}
+
+.second-col {
+    @extend .wine-col;
+    background-color: #EEEDE8;  
+}
+
+.third-col {
+    @extend .wine-col;
+    background-color: #BEA1A5; 
+} 
+
+.wine-img {
+    height: calc(100% - 100px); 
+    width: 100%;
+    padding: 30px;
+    object-fit: contain;
+}
+
+.wine-caption {
+    height: 100px;
+    color: black;
+    white-space: nowrap;
+    font-size: 20px;
+    
+    div {
+        color: black;
+        font-size: 12px;
+    }
+}
+ 
+

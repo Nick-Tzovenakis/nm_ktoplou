@@ -2,132 +2,201 @@
 <html lang="en">
 
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>ktoplou</title>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./dist/assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./dist/assets/css/theme.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="./favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row gx-3 ">
-            <div class="col-3 menu menu-bg text-left  d-none d-xl-block">
-                <div class="row ">
-                    <img src="/dist/assets/img/logo.png" class="img-fluid mx-auto mt-5 mb-5 p-0" alt="...">
-                </div>
-                <div class="row row-cols-1">
-                    <div class="col mt-5 d-flex justify-content-center">
-                        <nav class="nav menu-nav flex-column">
-                            <a class="menu-link p-1 text-muted" href="./index.html" target="_self">Αρχική</a>
-                            <a class="menu-link p-1 text-muted" href="#">Εταιρεία</a>
-                            <a class="menu-link p-1 text-muted" href="#">Ταυτότητα</a>
-                            <a class="menu-link p-1 text-muted" href="./wines.html" target="_self">Κρασιά</a>
-                            <a class="menu-link p-1 active text-primary" href="#">Ιστορία</a>
-                        </nav>
+            <div class="col-xl-3 ff-2 p-0">
+                <a href="index.html" class="nav-logo-mobile d-inline-block d-xl-none p-2">
+                    <img src="/dist/assets/img/cropped_logo.png" class="img-fluid d-xl-none" width="83" height="83"
+                        alt="logo">
+                </a>
+                <button id="navToggle" class="nav-toggle d-xl-none openbtn" type="button">
+                    <span class="icon"></span><br>
+                    <span class="icon"></span><br>
+                    <span class="icon"></span><br>
+                </button>
+
+                <div id="drawer" class="drawer menu d-flex flex-column align-items-center">
+                    <div class="d-flex d-xl-none align-self-end">
+                        <button id="navCloseBtn" type="button" class="closebtn pr-2 close"></button>
                     </div>
-                    <div class="col pt-5">
-                        <div class="col mt-5 d-flex justify-content-center">
-                            <div class=" flex-column">
-                                <a class="menu-link p-1 text-muted mt-5 mb-5 menu-footer-1" href="#">Επικοινωνία</a>
-                                <div class="mt-4">
-                                    <a class="menu-link p-1 text-primary menu-footer-2" href="#">EL</a>
-                                    <a class="menu-link p-1 text-muted menu-footer-2" href="#">/ENG</a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="/dist/assets/img/fb.png" class="p-1" alt="...">
-                                    </a>
-                                    <a href="#">
-                                        <img src="/dist/assets/img/inst.png" class="p-1" alt="...">
-                                    </a>
-                                </div>
+
+                    <div class="d-flex flex-column align-items-center text-left flex-grow-1">
+                        <div class="d-flex flex-column text-left flex-grow-1">
+
+                            <div class="container d-none d-xl-block text-left p-0">
+                                <img src="/dist/assets/img/logo.png" class="img-fluid mx-auto pt-5" alt="logo">
                             </div>
-                        </div>
-                        <div class="col mt-5 d-flex justify-content-center">
-                            <div class="col mt-5 mb-5 d-flex justify-content-center text-left ml-4">
-                                <div class="text-white menu-footer-3">&#169; 2021 ktimatoplou.gr Designed<br> &
-                                    developed
-                                    by <a href="#" class="text-white"><u>NETMECHANICS</u></a><br><a href="#"
-                                        class="text-white">Όροι χρήσης & Πολιτική απορρήτου
-                                    </a></div>
+
+                            <nav class="nav d-flex flex-column justify-content-center flex-grow-1">
+                                <a class="menu-link p-1 text-muted" href="#">Αρχική</a>
+                                <a class="menu-link p-1 text-muted" href="./in">Εταιρεία</a>
+                                <a class="menu-link p-1 text-muted" href="#">Ταυτότητα</a>
+                                <a class="menu-link p-1 text-muted" href="./wines.html">Κρασιά</a>
+                                <a class="menu-link p-1 active text-primary" href="#">Ιστορία</a>
+                            </nav>
+
+                            <a class="menu-link text-muted menu-fs-1" href="#">Επικοινωνία</a>
+                            <div class="mt-3">
+                                <a class="menu-link text-primary menu-fs-1" href="#">GR</a>
+                                <a class="menu-link text-muted menu-fs-1" href="#">/ENG</a>
+                            </div>
+                            <div class="pb-3">
+                                <a href="#">
+                                    <img src="/dist/assets/img/fb.png" class="pl-0" alt="facebook link">
+                                </a>
+                                <a href="#">
+                                    <img src="/dist/assets/img/inst.png" class="p-1" alt="instagram link">
+                                </a>
+                            </div>
+                            <div class="text-white menu-fs-2 mb-5">
+                                &#169; 2021 ktimatoplou.gr Designed<br> & developed by
+                                <a href="#" class="a-underlined text-white">NETMECHANICS</a><br><br>
+                                <a href="#" class="text-white">Όροι χρήσης & Πολιτική απορρήτου</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-xl-9 col-12 p-0 waves-bg">
                 <div class="container-fluid">
                     <div class="row row-cols-xl-3 text-left">
                         <div class="col-12 col-xl-2 wine-img history_bg"></div>
                         <div class="d-none d-xl-block col-xl-2"></div>
-                        <div class="col-12 col-xl-6 pt-xl-5 history-section"> 
+                        <div class="col-12 col-xl-6 pt-xl-5 history-section">
                             <div class="text-primary history-title pt-5 pb-2">
                                 Ιστορία
                             </div>
-                             
+
                             <div class="history-text pt-5">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                                since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
-                                versions of Lorem Ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui massa, maximus a elit at, posuere pharetra nulla. 
-                                Nulla ac hendrerit risus. Cras semper, lorem et accumsan hendrerit, eros lectus scelerisque lorem, in bibendum neque mi sit amet tellus.
-                                <br><br> 
-                                Nullam auctor tincidunt odio vitae accumsan. Curabitur aliquam arcu ante, id semper augue maximus at. Fusce diam sapien, lacinia et faucibus ac, 
-                                auctor ut eros. Proin laoreet augue metus, id pellentesque tortor egestas sit amet. Etiam sollicitudin fringilla risus vitae tempus. 
-                                Duis vel nulla congue, finibus purus in, cursus dolor. Aenean iaculis orci leo, in maximus elit vehicula nec. Proin ultrices nibh nisi, 
-                                ut pretium lectus convallis quis. Pellentesque id ex ultricies, vestibulum mauris sed, ullamcorper eros.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever
+                                since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                a type specimen book. It has survived not only
+                                five centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged. It was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                desktop publishing software like Aldus PageMaker including
+                                versions of Lorem Ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas dui massa, maximus a elit at, posuere pharetra nulla.
+                                Nulla ac hendrerit risus. Cras semper, lorem et accumsan hendrerit, eros lectus
+                                scelerisque lorem, in bibendum neque mi sit amet tellus.
                                 <br><br>
-                                Integer tincidunt diam eget ipsum molestie, in mollis leo dignissim. Cras ornare neque ut condimentum egestas. 
-                                In maximus dolor at ornare sodales. Mauris laoreet justo eu libero bibendum semper. Maecenas blandit non ante non tristique. Donec 
-                                sagittis nibh in enim auctor efficitur. Proin mollis, leo nec convallis lobortis, urna augue sagittis quam, sed pharetra turpis urna et lorem. 
-                                Vivamus et mi nec turpis fringilla rhoncus. Mauris non ultricies dolor, elementum laoreet felis. Integer pulvinar dolor at ipsum pellentesque, 
-                                sit amet pulvinar turpis imperdiet. Aliquam tellus enim, pharetra vel dolor sed, volutpat placerat lacus.
+                                Nullam auctor tincidunt odio vitae accumsan. Curabitur aliquam arcu ante, id semper
+                                augue maximus at. Fusce diam sapien, lacinia et faucibus ac,
+                                auctor ut eros. Proin laoreet augue metus, id pellentesque tortor egestas sit amet.
+                                Etiam sollicitudin fringilla risus vitae tempus.
+                                Duis vel nulla congue, finibus purus in, cursus dolor. Aenean iaculis orci leo, in
+                                maximus elit vehicula nec. Proin ultrices nibh nisi,
+                                ut pretium lectus convallis quis. Pellentesque id ex ultricies, vestibulum mauris sed,
+                                ullamcorper eros.
                                 <br><br>
-                                Cras quam tellus, malesuada vitae bibendum eget, varius et Cras laoreet viverra tellus, ut vulputate odio tincidunt aliquam. Sed consectetur vehicula elit eu consequat. Vestibulum sed dui urna. Quisque 
-                                fringilla sagittis orci, non ultricies urna scelerisque in. Praesent leo quam, vehicula et justo eu, suscipit consectetur lectus. Etiam ut urna 
-                                dignissim, tempor orci cursus, maximus felis. Quisque vitae viverra mauris. Ut mollis hendrerit finibus. Aenean id eleifend mi. Mauris vel est 
-                                ultricies, posuere turpis eget, lobortis ipsum. Sed orci risus, pretium non tincidunt in, interdum et orci.
+                                Integer tincidunt diam eget ipsum molestie, in mollis leo dignissim. Cras ornare neque
+                                ut condimentum egestas.
+                                In maximus dolor at ornare sodales. Mauris laoreet justo eu libero bibendum semper.
+                                Maecenas blandit non ante non tristique. Donec
+                                sagittis nibh in enim auctor efficitur. Proin mollis, leo nec convallis lobortis, urna
+                                augue sagittis quam, sed pharetra turpis urna et lorem.
+                                Vivamus et mi nec turpis fringilla rhoncus. Mauris non ultricies dolor, elementum
+                                laoreet felis. Integer pulvinar dolor at ipsum pellentesque,
+                                sit amet pulvinar turpis imperdiet. Aliquam tellus enim, pharetra vel dolor sed,
+                                volutpat placerat lacus.
                                 <br><br>
-                                Etiam blandit gravida nulla, vel ornare nisl pretium nec. Donec pellentesque accumsan tellus sed pellentesque.
-                                Vestibulum rutrum ullamcorper eros pulvinar imperdiet. Cras laoreet dui et ex feugiat ullamcorper. Maecenas lobortis diam 
-                                non enim sodales hendrerit. Quisque sed neque laoreet, dignissim nunc quis, posuere ipsum. Etiam odio nulla, porta sit amet vulputate ut, 
-                                vestibulum in justo. Aliquam nec velit nulla. Quisque euismod sed justo in blandit. Proin auctor, felis quis consequat gravida, urna turpis 
-                                pretium diam, eu posuere quam risus sit amet neque. Phasellus faucibus nunc nec risus posuere rutrum. Ut molestie, turpis a interdum aliquet, 
-                                magna augue mattis sapien, et molestie velit nulla vitae ex. Phasellus quis augue fringilla felis semper commodo non non lacus. In egestas a 
-                                tellus a semper. Mauris risus enim, auctor mollis felis quis, condimentum aliquet magna. Etiam turpis neque, ultrices at gravida sed, congue 
+                                Cras quam tellus, malesuada vitae bibendum eget, varius et Cras laoreet viverra tellus,
+                                ut vulputate odio tincidunt aliquam. Sed consectetur vehicula elit eu consequat.
+                                Vestibulum sed dui urna. Quisque
+                                fringilla sagittis orci, non ultricies urna scelerisque in. Praesent leo quam, vehicula
+                                et justo eu, suscipit consectetur lectus. Etiam ut urna
+                                dignissim, tempor orci cursus, maximus felis. Quisque vitae viverra mauris. Ut mollis
+                                hendrerit finibus. Aenean id eleifend mi. Mauris vel est
+                                ultricies, posuere turpis eget, lobortis ipsum. Sed orci risus, pretium non tincidunt
+                                in, interdum et orci.
+                                <br><br>
+                                Etiam blandit gravida nulla, vel ornare nisl pretium nec. Donec pellentesque accumsan
+                                tellus sed pellentesque.
+                                Vestibulum rutrum ullamcorper eros pulvinar imperdiet. Cras laoreet dui et ex feugiat
+                                ullamcorper. Maecenas lobortis diam
+                                non enim sodales hendrerit. Quisque sed neque laoreet, dignissim nunc quis, posuere
+                                ipsum. Etiam odio nulla, porta sit amet vulputate ut,
+                                vestibulum in justo. Aliquam nec velit nulla. Quisque euismod sed justo in blandit.
+                                Proin auctor, felis quis consequat gravida, urna turpis
+                                pretium diam, eu posuere quam risus sit amet neque. Phasellus faucibus nunc nec risus
+                                posuere rutrum. Ut molestie, turpis a interdum aliquet,
+                                magna augue mattis sapien, et molestie velit nulla vitae ex. Phasellus quis augue
+                                fringilla felis semper commodo non non lacus. In egestas a
+                                tellus a semper. Mauris risus enim, auctor mollis felis quis, condimentum aliquet magna.
+                                Etiam turpis neque, ultrices at gravida sed, congue
                                 at metus.
                                 <br><br>
-                                Donec quis orci lorem. Maecenas facilisis pretium nunc et auctor. In id mattis nisl, non malesuada sapien. Mauris erat ante, auctor eu risus 
-                                sit amet, dapibus volutpat nibh. Donec feugiat vulputate neque vel mattis. Vivamus vitae tellus ac diam porttitor posuere. Cras dui lacus, 
-                                aliquam in efficitur non, lacinia at eros. Etiam sed lacinia nisl. Vivamus magna lectus, elementum quis lobortis in, sodales et nibh.
-                                Integer tincidunt diam eget ipsum molestie, in mollis leo dignissim. Cras ornare neque ut condimentum egestas. 
-                                In maximus dolor at ornare sodales. Mauris laoreet justo eu libero bibendum semper. Maecenas blandit non ante non tristique. Donec 
-                                sagittis nibh in enim auctor efficitur. Proin mollis, leo nec convallis lobortis, urna augue sagittis quam, sed pharetra turpis urna et lorem. 
-                                Vivamus et mi nec turpis fringilla rhoncus. Mauris non ultricies dolor, elementum laoreet felis. Integer pulvinar dolor at ipsum pellentesque, 
-                                sit amet pulvinar turpis imperdiet. Aliquam tellus enim, pharetra vel dolor sed, volutpat placerat lacus.
+                                Donec quis orci lorem. Maecenas facilisis pretium nunc et auctor. In id mattis nisl, non
+                                malesuada sapien. Mauris erat ante, auctor eu risus
+                                sit amet, dapibus volutpat nibh. Donec feugiat vulputate neque vel mattis. Vivamus vitae
+                                tellus ac diam porttitor posuere. Cras dui lacus,
+                                aliquam in efficitur non, lacinia at eros. Etiam sed lacinia nisl. Vivamus magna lectus,
+                                elementum quis lobortis in, sodales et nibh.
+                                Integer tincidunt diam eget ipsum molestie, in mollis leo dignissim. Cras ornare neque
+                                ut condimentum egestas.
+                                In maximus dolor at ornare sodales. Mauris laoreet justo eu libero bibendum semper.
+                                Maecenas blandit non ante non tristique. Donec
+                                sagittis nibh in enim auctor efficitur. Proin mollis, leo nec convallis lobortis, urna
+                                augue sagittis quam, sed pharetra turpis urna et lorem.
+                                Vivamus et mi nec turpis fringilla rhoncus. Mauris non ultricies dolor, elementum
+                                laoreet felis. Integer pulvinar dolor at ipsum pellentesque,
+                                sit amet pulvinar turpis imperdiet. Aliquam tellus enim, pharetra vel dolor sed,
+                                volutpat placerat lacus.
                                 <br><br>
-                                Cras quam tellus, malesuada vitae bibendum eget, varius et Cras laoreet viverra tellus, ut vulputate odio tincidunt aliquam. Sed consectetur vehicula elit eu consequat. Vestibulum sed dui urna. Quisque 
-                                fringilla sagittis orci, non ultricies urna scelerisque in. Praesent leo quam, vehicula et justo eu, suscipit consectetur lectus. Etiam ut urna 
-                                dignissim, tempor orci cursus, maximus felis. Quisque vitae viverra mauris. Ut mollis hendrerit finibus. Aenean id eleifend mi. Mauris vel est 
-                                ultricies, posuere turpis eget, lobortis ipsum. Sed orci risus, pretium non tincidunt in, interdum et orci.
+                                Cras quam tellus, malesuada vitae bibendum eget, varius et Cras laoreet viverra tellus,
+                                ut vulputate odio tincidunt aliquam. Sed consectetur vehicula elit eu consequat.
+                                Vestibulum sed dui urna. Quisque
+                                fringilla sagittis orci, non ultricies urna scelerisque in. Praesent leo quam, vehicula
+                                et justo eu, suscipit consectetur lectus. Etiam ut urna
+                                dignissim, tempor orci cursus, maximus felis. Quisque vitae viverra mauris. Ut mollis
+                                hendrerit finibus. Aenean id eleifend mi. Mauris vel est
+                                ultricies, posuere turpis eget, lobortis ipsum. Sed orci risus, pretium non tincidunt
+                                in, interdum et orci.
                                 <br><br>
-                                Etiam blandit gravida nulla, vel ornare nisl pretium nec. Donec pellentesque accumsan tellus sed pellentesque.
-                                Vestibulum rutrum ullamcorper eros pulvinar imperdiet. Cras laoreet dui et ex feugiat ullamcorper. Maecenas lobortis diam 
-                                non enim sodales hendrerit. Quisque sed neque laoreet, dignissim nunc quis, posuere ipsum. Etiam odio nulla, porta sit amet vulputate ut, 
-                                vestibulum in justo. Aliquam nec velit nulla. Quisque euismod sed justo in blandit. Proin auctor, felis quis consequat gravida, urna turpis 
-                                pretium diam, eu posuere quam risus sit amet neque. Phasellus faucibus nunc nec risus posuere rutrum. Ut molestie, turpis a interdum aliquet, 
-                                magna augue mattis sapien, et molestie velit nulla vitae ex. Phasellus quis augue fringilla felis semper commodo non non lacus. In egestas a 
-                                tellus a semper. Mauris risus enim, auctor mollis felis quis, condimentum aliquet magna. Etiam turpis neque, ultrices at gravida sed, congue 
+                                Etiam blandit gravida nulla, vel ornare nisl pretium nec. Donec pellentesque accumsan
+                                tellus sed pellentesque.
+                                Vestibulum rutrum ullamcorper eros pulvinar imperdiet. Cras laoreet dui et ex feugiat
+                                ullamcorper. Maecenas lobortis diam
+                                non enim sodales hendrerit. Quisque sed neque laoreet, dignissim nunc quis, posuere
+                                ipsum. Etiam odio nulla, porta sit amet vulputate ut,
+                                vestibulum in justo. Aliquam nec velit nulla. Quisque euismod sed justo in blandit.
+                                Proin auctor, felis quis consequat gravida, urna turpis
+                                pretium diam, eu posuere quam risus sit amet neque. Phasellus faucibus nunc nec risus
+                                posuere rutrum. Ut molestie, turpis a interdum aliquet,
+                                magna augue mattis sapien, et molestie velit nulla vitae ex. Phasellus quis augue
+                                fringilla felis semper commodo non non lacus. In egestas a
+                                tellus a semper. Mauris risus enim, auctor mollis felis quis, condimentum aliquet magna.
+                                Etiam turpis neque, ultrices at gravida sed, congue
                                 at metus.
                                 <br><br>
-                                Donec quis orci lorem. Maecenas facilisis pretium nunc et auctor. In id mattis nisl, non malesuada sapien. Mauris erat ante, auctor eu risus 
-                                sit amet, dapibus volutpat nibh. Donec feugiat vulputate neque vel mattis. Vivamus vitae tellus ac diam porttitor posuere. Cras dui lacus, 
-                                aliquam in efficitur non, lacinia at eros. Etiam sed lacinia nisl. Vivamus magna lectus, elementum quis lobortis in, sodales et nibh.
+                                Donec quis orci lorem. Maecenas facilisis pretium nunc et auctor. In id mattis nisl, non
+                                malesuada sapien. Mauris erat ante, auctor eu risus
+                                sit amet, dapibus volutpat nibh. Donec feugiat vulputate neque vel mattis. Vivamus vitae
+                                tellus ac diam porttitor posuere. Cras dui lacus,
+                                aliquam in efficitur non, lacinia at eros. Etiam sed lacinia nisl. Vivamus magna lectus,
+                                elementum quis lobortis in, sodales et nibh.
                             </div>
                         </div>
                         <div class="d-none d-xl-block col-xl-2"></div>
@@ -136,10 +205,9 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/drawer-nav.js"></script>
 </body>
 
 </html>
