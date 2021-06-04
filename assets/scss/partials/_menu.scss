@@ -1,3 +1,5 @@
+// Menu
+
 .nav-common {
     position: fixed;
     top: 8px; 
@@ -43,7 +45,9 @@
 .menu-fs-2{
     font-size: 10px;
 }
- 
+
+// Burger btn
+
 .openbtn {
     cursor: pointer;
     background-color: transparent; 
@@ -52,17 +56,18 @@
     padding-top: 12px;
 }
 
-.icon:after {
+.icon:after { 
     content: '';
-    width: 50px;
-    border-bottom: solid 1px #fff;
+    width: 50px; 
+    background-color: white;
     border-radius: 25px; 
     position: absolute;
     right: 8px;
-    height: 4px;
-    background: white;
+    height: 4px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
+
+// Close btn
 
 .close {
     position: absolute;
@@ -70,25 +75,27 @@
     top: 16px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.5; 
+
+    &::before, &::after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: white;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
 }
-.close:hover {
-    opacity: 1;
-}
-.close:before, .close:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 2px;
-    background-color: white;
-}
-.close:before {
-    transform: rotate(45deg);
-}
-.close:after {
-    transform: rotate(-45deg);
-}
+
+// Media Queries
 
 @media (max-width: 1199px){
     .drawer  { 
@@ -116,8 +123,4 @@
             transform: translate3d(0,0,0);
         }
     }
-}
-
-.a-underlined {
-    text-decoration: underline;
 }

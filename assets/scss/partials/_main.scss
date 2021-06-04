@@ -1,35 +1,10 @@
-/* Wines list view */
+/* Wine view */
 .waves-bg{
     background-image: url("../../../dist/assets/img/bg_waves.png");
     background-repeat: no-repeat; 
-    background-size: cover; 
-    height: 100vh;
+    background-size: cover;  
 } 
 
-.first_wine{
-    background-color: #C5BEAB;
-    height: 100vh; 
-}
-.second_wine{
-    background-color: #EEEDE8;
-    height: 100vh;
-}
-.third_wine{
-    background-color: #BEA1A5;
-    height: 100vh;
-} 
-
-.wine-text-1{
-    color: black;
-    font-size: 20px;
-}
-
-.wine-text-2{
-    color: black;
-    font-size: 12px;
-}
-
-/* Wine view */
 .grapes_bg{
     background-image: url("../../../dist/assets/img/grapes.png");
     background-repeat: no-repeat; 

@@ -13,6 +13,11 @@ $theme-colors: (
   "secondary": #606060
 );
 
+$carousel-indicator-width:           8px;
+$carousel-indicator-height:          8px;
+$carousel-indicator-hit-area-height: 0; 
+$carousel-indicator-active-bg:       #A58A55;
+
 // Theme
 
 $font-family-secondary: "Noto Serif", $font-family-sans-serif;
