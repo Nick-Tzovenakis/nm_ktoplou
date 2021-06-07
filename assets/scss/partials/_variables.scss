@@ -1,16 +1,16 @@
 // Bootstrap
 
-$grid-gutter-width: 2rem;
+$grid-gutter-width: 32px;
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-base: "Roboto", $font-family-sans-serif;
 
-$body-color: #606060;
+$body-color: #232323;
 $text-muted: #707070;
 
 $theme-colors: (
   "primary": #A58A55,
-  "secondary": #606060
+  "secondary": #232323
 );
 
 $carousel-indicator-width:           8px;

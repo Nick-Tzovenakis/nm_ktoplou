@@ -1,0 +1,46 @@
+/* History */
+.history_bg {
+    height: 100vh;
+    background: url("../../../dist/assets/img/Slider1.jpg") left -300px top 100px / cover no-repeat; 
+}
+
+.history-section{
+    
+    .history-title{
+        font-size: 28px;
+    }
+    .history-text{
+        overflow-y: auto;
+        height:60vh;
+        font-size: 12px;
+    }
+}
+
+/* Responsiveness */
+@media (max-width:768px) {  
+
+    .history_bg{
+        background-position: top;
+        height: 80vh;
+    }
+    
+    .history-section { 
+        .history-text{
+            overflow-y: unset;
+            height:100%;
+        }
+    } 
+}
+
+@media  (max-width: 1199px) and (min-width:768px) {
+    .history_bg{
+        background-position: top;
+        height: 80vh;
+    }
+    .history-section { 
+        .history-text{
+            overflow-y: unset;
+            height:100%;
+        }
+    } 
+}

@@ -1,49 +1,74 @@
-/* History */
-.history_bg{
-    background-image: url("../../../dist/assets/img/Slider1.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: left -300px top 100px;
+.slider {
+    height: 100vh; 
+}
+
+.slider-img {
+    object-fit: cover; 
     height: 100vh;
+    width: 100%;
 }
 
-.history-section{
+.slider-church {
+    @extend .slider-img;
+}
+
+.slider-wine{
+    @extend .slider-img;
+    filter: brightness(80%);
+}
+
+.slider-caption { // todo  
+    right: 8px; 
+}
+
+.carousel-title-main {
+    padding-bottom: 20px;
+    position: relative;
     
-    .history-title{
-        font-size: 28px;
-    }
-    .history-text{
-        overflow-y: auto;
-        height:60vh;
-        font-size: 12px;
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 74px;
+        height: 2px;
+        top: 100%;
+        right:0;
     }
 }
 
-/* Responsiveness */
-@media (max-width:768px) {  
+// Indicators
 
-    .history_bg{
-        background-position: top;
-        height: 80vh;
-    }
-    
-    .history-section { 
-        .history-text{
-            overflow-y: unset;
-            height:100%;
-        }
-    } 
+.indicator {
+    margin-bottom: 10px;
+    border-radius: 80%; 
 }
 
-@media  (max-width: 1199px) and (min-width:768px) {
-    .history_bg{
-        background-position: top;
-        height: 80vh;
+.carousel-indicators-custom {
+    position: relative;
+    display: block;
+}
+
+// Media Queries
+
+@include media-breakpoint-up(xl) { 
+    .slider-caption {  
+        top: 0;  
     }
-    .history-section { 
-        .history-text{
-            overflow-y: unset;
-            height:100%;
-        }
-    } 
+}
+
+// Other
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right { 
+        transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right { 
+        transform: translate3d(0, 100%, 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left { 
+        transform: translate3d(0, -100%, 0);
 }
