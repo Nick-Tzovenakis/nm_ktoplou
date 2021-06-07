@@ -1,0 +1,56 @@
+.waves-bg{
+    background-image: url("../../../dist/assets/img/bg_waves.png");
+    background-repeat: no-repeat; 
+    background-size: cover;  
+} 
+
+.grapes_bg{
+    background-image: url("../../../dist/assets/img/grapes.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: left -300px top 200px;
+    height: 100vh;
+}
+
+.wine-info { 
+    height: 80vh;
+    overflow: auto;
+
+    a {
+        color: black;
+    } 
+    .wine-title {
+        font-size: 24px;
+    }
+    .wine-details {
+        font-size: 12px;
+    }
+}
+
+// @media (max-width:768px) {
+//     .grapes_bg { 
+//         background-position: left -300px;
+//         height: 80vh;
+//     }
+
+//     .wine-info {  
+//         .wine-analysis { 
+//             overflow-y: unset;
+//             height:100%;
+//         }
+//     }
+// }
+
+// @media  (max-width: 1199px) and (min-width:768px) {
+
+//     .grapes_bg { 
+//         background-position: left -800px;
+//         height: 80vh;
+//     }
+//     .wine-info {  
+//         .wine-analysis { 
+//             overflow-y: unset;
+//             height:100%;
+//         }
+//     }
+// }

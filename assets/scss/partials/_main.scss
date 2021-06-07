@@ -1,41 +1,3 @@
-/* Wine view */
-.waves-bg{
-    background-image: url("../../../dist/assets/img/bg_waves.png");
-    background-repeat: no-repeat; 
-    background-size: cover;  
-} 
-
-.grapes_bg{
-    background-image: url("../../../dist/assets/img/grapes.png");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: left -300px top 200px;
-    height: 100vh;
-}
-
-.wine-info {
-    height:70vh;
-    a {
-        color: black;
-      }
-    .wine-img {
-        height: 100vh; 
-    }
-    .wine-title {
-        font-size: 24px;
-    }
-    .wine-details {
-        font-size: 12px;
-    }
-    .wine-description {
-        color:black;
-    } 
-    .wine-analysis {
-        overflow-y: auto;
-        height:50%;
-    }
-}
-
 /* History */
 .history_bg{
     background-image: url("../../../dist/assets/img/Slider1.jpg");
@@ -70,19 +32,7 @@
             overflow-y: unset;
             height:100%;
         }
-    }
-
-    .grapes_bg { 
-        background-position: left -300px;
-        height: 80vh;
-    }
-
-    .wine-info {  
-        .wine-analysis { 
-            overflow-y: unset;
-            height:100%;
-        }
-    }
+    } 
 }
 
 @media  (max-width: 1199px) and (min-width:768px) {
@@ -95,16 +45,5 @@
             overflow-y: unset;
             height:100%;
         }
-    }
-
-    .grapes_bg { 
-        background-position: left -800px;
-        height: 80vh;
-    }
-    .wine-info {  
-        .wine-analysis { 
-            overflow-y: unset;
-            height:100%;
-        }
-    }
+    } 
 }
