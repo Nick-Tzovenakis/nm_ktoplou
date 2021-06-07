@@ -1,6 +1,10 @@
 .nav-mobile {
     background-color: theme-color("secondary");
     height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 1040;
+    width: 100vw;
 }
 
 .wine-col {
@@ -17,12 +21,12 @@
 
 .second-col {
     @extend .wine-col;
-    background-color: #EEEDE8;  
+    background-color: #BEA1A5;  
 }
 
 .third-col {
     @extend .wine-col;
-    background-color: #BEA1A5; 
+    background-color: #EEEDE8; 
 } 
 
 .wine-img {
@@ -44,4 +48,11 @@
     }
 }
  
-
+@include media-breakpoint-down(lg){
+    .wine-col{
+        height: calc(100vh - 150px);
+    }
+    .first-col {
+        margin-top: 100px;
+    }
+}
