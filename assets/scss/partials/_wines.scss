@@ -14,6 +14,7 @@
         text-decoration: none;
     }
 }
+
 .first-col {
     @extend .wine-col;
     background-color: #C5BEAB;  
@@ -29,30 +30,35 @@
     background-color: #EEEDE8; 
 } 
 
-.wine-img {
-    height: calc(100% - 100px); 
-    width: 100%;
-    padding: 30px;
-    object-fit: contain;
+.wine-cont {
+    height: calc(100vh - 100px);
+}
+
+.wine-img { 
+    height:100%; 
 }
 
 .wine-caption {
     height: 100px;
-    color: black;
+    color: theme-color("secondary");
     white-space: nowrap;
     font-size: 20px;
-    
-    div {
-        color: black;
-        font-size: 12px;
+    div { 
+        font-size: 14px;
     }
 }
  
-@include media-breakpoint-down(lg){
-    .wine-col{
+@include media-breakpoint-down(lg) {
+    .wine-col {
         height: calc(100vh - 150px);
     }
+
+    .wine-cont{
+        height: calc(100vh - 250px); // -.- 100 from bottom-text + 150 from prev 
+    }
+
     .first-col {
         margin-top: 100px;
     }
+
 }

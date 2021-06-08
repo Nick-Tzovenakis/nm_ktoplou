@@ -1,17 +1,17 @@
-.waves-bg{
-    background: url("../../../dist/assets/img/bg_waves.png") cover no-repeat;
+.waves-bg {
+    background: url("../../../dist/assets/img/bg_waves.png");
 } 
 
-.grapes_bg{
+.grapes-bg { 
     height: 100vh;
-    background: url("../../../dist/assets/img/grapes.png") left -300px top 200px / cover no-repeat; 
-}
- 
-.img-bottle{
-    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: url("../../../dist/assets/img/grapes.png") left -400px top 150px / cover no-repeat; 
 }
 
-.wine-info {  
+.wine-info {   
+    padding-top: 100px;
+
     a {
         color: black;
     } 
@@ -21,33 +21,50 @@
     .wine-details {
         font-size: 12px;
     }
+    .wine-categories {
+        max-height: 50%;
+        overflow: auto;
+    }
 } 
 
-// @include media-breakpoint-down(sm) {
-//     .grapes_bg { 
-//         background-position: left -300px;
-//         height: 80vh;
-//     }
+@include media-breakpoint-down(sm) {
+    .grapes-bg { 
+        background-position: left -400px;
+    }
+}
 
-//     .wine-info {  
-//         .wine-analysis { 
-//             overflow-y: unset;
-//             height:100%;
-//         }
-//     }
-// }
+@include media-breakpoint-between(sm,md) {
+    .grapes-bg { 
+        background-position: left -700px;
+    }
+}
+ 
+@include media-breakpoint-between(md,lg) {
+    .grapes-bg { 
+        background-position: left -900px;
+    }
+}
 
-// //@include media-breakpoint-between(md, xl)
-// @media  (min-width:768px) and (max-width: 1199px) {
+@include media-breakpoint-only(lg) {
+    .grapes-bg { 
+        background-position: left -1200px;
+    }
+}
 
-//     .grapes_bg { 
-//         background-position: left -800px;
-//         height: 80vh;
-//     }
-//     .wine-info {  
-//         .wine-analysis { 
-//             overflow-y: unset;
-//             height:100%;
-//         }
-//     }
-// }
+@media (max-width: 1199.98px) {
+    .grapes-bg { 
+        height: 60vh;
+        margin-top:100px;
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .wine-info {  
+        padding-top: 20px;
+
+        .wine-categories { 
+            max-height: 100%; 
+            overflow: unset;
+        }
+    } 
+}

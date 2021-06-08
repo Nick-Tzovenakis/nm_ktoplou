@@ -1,7 +1,3 @@
-.main-bg {
-    background-color: theme-color("secondary");
-}
-
 .slider {
     height: 100vh;  
     border: 1px solid #707070; 
@@ -22,7 +18,7 @@
     filter: brightness(80%);
 }
 
-.slider-caption { // todo  
+.slider-caption {
     right: 8px; 
 }
 
@@ -48,9 +44,15 @@
     border-radius: 80%;
 }
 
-.carousel-indicators-custom {
-    position: relative;
-    display: block;
+.carousel-indicators-custom { 
+    flex-flow: column;
+    width: 50px;
+    top:0;
+    padding: 5px;
+    left: auto; 
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 // Media Queries
@@ -58,6 +60,10 @@
 @include media-breakpoint-up(xl) { 
     .slider-caption {  
         top: 0;  
+    }
+
+    .carousel-main {
+        padding-right: 50px;
     }
 }
 
