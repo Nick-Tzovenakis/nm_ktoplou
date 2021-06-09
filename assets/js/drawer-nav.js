@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const drawer = document.getElementById("drawer");
 
     navToggle.addEventListener("click", (e) => {
-        if (!navToggle.classList.contains("active-one")) {
-            navToggle.classList.add("active-one");
+        if (!navToggle.classList.contains("active")) {
+            navToggle.classList.add("active");
             drawer.classList.add("nav-opened");
         } else {
-            navToggle.classList.remove("active-one");
+            navToggle.classList.remove("active");
             drawer.classList.remove("nav-opened");
         }
 

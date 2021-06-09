@@ -27,11 +27,10 @@
                 <a href="index.html" class="nav-logo-mobile d-inline-block d-xl-none p-2">
                     <img src="/dist/assets/img/cropped_logo.png" class="img-fluid d-xl-none" width="83" height="83"
                         alt="logo">
-                </a> 
-                <!-- todo review examples -->
-                <div id="navToggle" class="icon-one d-xl-none">
-                    <div class="hamburger hamburger-one"></div>
-                </div>
+                </a>  
+                <button id="navToggle" class="toggle-btn d-xl-none">
+                    <span class="toggle-icon"></span>
+                </button>
 
                 <div id="drawer" class="drawer menu d-flex flex-column align-items-center">
                     <div class="d-flex flex-column align-items-center text-left flex-grow-1">
@@ -41,7 +40,7 @@
                                 <img src="/dist/assets/img/logo.png" class="img-fluid mx-auto" alt="logo">
                             </div>
 
-                            <!-- todo ul / scrollable navigation -->
+                            <!-- todo: scrollable navigation -->
                             <ul class="nav d-flex flex-column justify-content-center flex-grow-1">
                                 <li class="nav-item "><a class="nav-link menu-link active text-primary" href="#">Αρχική</a></li>
                                 <li class="nav-item"><a class="nav-link menu-link" href="#">Εταιρεία</a></li>
@@ -52,13 +51,11 @@
 
                             <a class="menu-link menu-fs-1" href="#">Επικοινωνία</a>
                             <div class="pt-4">
-                                <!-- todo active states -->
-                                <a class="menu-link text-primary menu-fs-1" href="#">EL</a> 
-                                <a class="menu-link menu-fs-1" href="#">/ENG</a>
+                                <a class="menu-lang active text-primary menu-fs-1" href="#">EL</a> 
+                                <a class="menu-lang menu-fs-1" href="#">/ENG</a>
                             </div>
                             <div class="pl-1 pt-2 pb-5">
-                                <a href="#" class="pr-3" target="_blank">
-                                    <!-- todo size/spacing -->
+                                <a href="#" class="pr-3" target="_blank"> 
                                     <img src="./dist/assets/img/fb.png" width="18" height="18" alt="facebook link">
                                 </a>
                                 <a href="#" target="_blank">
@@ -100,7 +97,7 @@
                         </a>
                     </div> 
                     <ol class="carousel-indicators carousel-indicators-custom bg-secondary align-items-center d-none d-xl-flex">
-                        <li class="indicator active" data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li class="indicator active" data-target="#carousel" data-slide-to="0"></li>
                         <li class="indicator" data-target="#carousel" data-slide-to="1"></li>
                     </ol>
                 </div>
