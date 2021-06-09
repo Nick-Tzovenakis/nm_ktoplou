@@ -13,8 +13,7 @@
     height: 83px;
 }
 
-.menu {  
-    height: 100vh;
+.menu {   
     background: url("../../../dist/assets/img/bg_1.png") left -80px bottom / contain no-repeat;
 }
 
@@ -109,8 +108,7 @@
 // Media Queries
 
 @include media-breakpoint-down(lg) {
-    .drawer  { 
-        height: 100vh;
+    .drawer  {  
         width: 98vw;
         position: fixed;
         z-index: 1040;

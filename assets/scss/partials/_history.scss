@@ -1,45 +1,20 @@
 /* History */
-.history_bg { 
-    background: url("../../../dist/assets/img/Slider1.jpg") top 100px / cover no-repeat; 
+.history-bg { 
+    background: url("../../../dist/assets/img/Slider1.jpg") top 100px center no-repeat; 
 }
 
-.history-section{
-    
-    .history-title{
+.history-info {
+    margin-top: 100px;
+    .history-title {
         font-size: 28px;
     }
-    .history-text{
-        overflow-y: auto;
-        height:60vh;
-        font-size: 12px;
-    }
 }
 
-/* Responsiveness */
-@media (max-width:768px) {  
-
-    .history_bg{
-        background-position: top;
-        height: 80vh;
+@include media-breakpoint-up(xl) {
+    .history-details {
+        overflow: auto;
+        height: 600px;
+        min-height: 600px;
+        max-height: 50%;
     }
-    
-    .history-section { 
-        .history-text{
-            overflow-y: unset;
-            height:100%;
-        }
-    } 
-}
-
-@media  (max-width: 1199px) and (min-width:768px) {
-    .history_bg{
-        background-position: top;
-        height: 80vh;
-    }
-    .history-section { 
-        .history-text{
-            overflow-y: unset;
-            height:100%;
-        }
-    } 
 }
