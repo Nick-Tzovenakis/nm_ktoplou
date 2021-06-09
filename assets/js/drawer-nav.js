@@ -1,15 +1,16 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const navToggle = document.getElementById("navToggle");
-    const navCloseBtn = document.getElementById("navCloseBtn");
     const drawer = document.getElementById("drawer");
 
     navToggle.addEventListener("click", (e) => {
-        drawer.classList.add("nav-opened");
-        e.preventDefault();
-    });
+        if (!navToggle.classList.contains("active-one")) {
+            navToggle.classList.add("active-one");
+            drawer.classList.add("nav-opened");
+        } else {
+            navToggle.classList.remove("active-one");
+            drawer.classList.remove("nav-opened");
+        }
 
-    navCloseBtn.addEventListener("click", (e) => {
-        drawer.classList.remove("nav-opened");
         e.preventDefault();
     });
 });
