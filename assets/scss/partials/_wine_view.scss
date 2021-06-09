@@ -21,9 +21,9 @@
     .wine-details {
         font-size: 12px;
     }
-    .wine-categories {
-        max-height: 50%;
-        overflow: auto;
+    .wine-categories { 
+        min-height: 400px;
+        max-height: 50%; 
     }
 } 
 
@@ -60,11 +60,14 @@
     }
 
     .wine-info {  
-        padding-top: 20px;
-
-        .wine-categories { 
-            max-height: 100%; 
-            overflow: unset;
-        }
+        padding-top: 20px; 
     } 
+}
+
+@media (min-width: 1200px) {
+    .wine-categories { 
+        height: 400px;
+        max-height: 50%;
+        overflow: auto; 
+    }
 }

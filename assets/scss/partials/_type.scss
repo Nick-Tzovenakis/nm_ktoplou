@@ -1,3 +1,13 @@
 .ff-2 {
     font-family: $font-family-secondary;
 }
+
+.bg-secondary {
+    color: #fff;
+    a {
+        color: #606060;
+        @include hover-focus() {
+            color: #fff;
+        }
+    }
+}

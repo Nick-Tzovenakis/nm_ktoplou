@@ -19,11 +19,15 @@
 }
 
 .slider-caption {
+    font-size: 16px;
+    line-height: 1;
     right: 8px; 
 }
 
 .carousel-title-main {
-    padding-bottom: 20px;
+    font-size: 40px;
+    padding-bottom: 11px; 
+    margin-bottom: 11px; 
     position: relative;
     
     &::after {
@@ -58,8 +62,14 @@
 // Media Queries
 
 @include media-breakpoint-up(xl) { 
-    .slider-caption {  
+    .slider-caption {
+        font-size: 24px;  
         top: 0;  
+    }
+    .carousel-title-main {
+        font-size: 75px;
+        padding-bottom: 50px;
+        margin-bottom: 50px; 
     }
 
     .carousel-main {
